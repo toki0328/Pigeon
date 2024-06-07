@@ -1,8 +1,9 @@
 #pragma once
 
-// For use by Pigeon applications
-
+// 用于客户端
 
 #include "Pigeon/Application.h"
 
-#include "Pigeon\EntryPoint.h"
+// --- EntryPoint -----
+#include "Pigeon/EntryPoint.h"
+// --------------------

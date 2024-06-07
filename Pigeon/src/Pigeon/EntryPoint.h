@@ -1,15 +1,17 @@
 #pragma once
 
+// 创建客户端应用程序
 
 #ifdef PG_PLATFORM_WINDOWS
 
-extern Pigeon::Application* Pigeon::CreateApplication();	//客户端实现，在Application.h中定义
+// exturn调用其他文件的变量
+extern Pigeon::Application* Pigeon::CreateApplication();
 
-int main(int argc, char** argv)
+void main()
 {
-	auto app = Pigeon::CreateApplication();	//创建应用程序
+	auto app = Pigeon::CreateApplication();
 	app->Run();
 	delete app;
 }
 
-#endif
+#endif // PG_PLATFORM_WINDOWS

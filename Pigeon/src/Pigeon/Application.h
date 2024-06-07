@@ -1,8 +1,12 @@
 #pragma once
+
+// 引擎端
+
 #include "Core.h"
 
 namespace Pigeon {
 
+	// 在Sanbox中使用此类，链接过去
 	class PIGEON_API Application
 	{
 	public:
@@ -10,11 +14,10 @@ namespace Pigeon {
 		virtual ~Application();
 
 		void Run();
-
 	};
 
-	//To be defined in CLIENT
+	// 在客户端定义创建
 	Application* CreateApplication();
-
 }
+
 

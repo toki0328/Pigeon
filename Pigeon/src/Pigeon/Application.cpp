@@ -1,13 +1,11 @@
 #include "Application.h"
 
-
 namespace Pigeon {
 
 	Application::Application()
 	{
 
 	}
-
 
 	Application::~Application()
 	{
@@ -16,6 +14,6 @@ namespace Pigeon {
 
 	void Application::Run()
 	{
-		while (true);
+		while (true);	// 持续运行
 	}
 }

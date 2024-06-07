@@ -7,5 +7,5 @@
 		#define PIGEON_API __declspec(dllimport)
 	#endif
 #else
-	#error Pigeon only support windows!
+	#error Pigeon only support Windows!
 #endif
