@@ -1,3 +1,1 @@
-#[submodule "Pigeon/vendor/spdlog"]
-#	path = Pigeon/vendor/spdlog
-#	url = https://github.com/gabime/spdlog
+
