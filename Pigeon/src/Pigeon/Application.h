@@ -16,7 +16,7 @@ namespace Pigeon {
 		void Run();
 	};
 
-	// 在客户端定义创建
+	// 在客户端定义创建，用于返回一个app的对象
 	Application* CreateApplication();
 }
 

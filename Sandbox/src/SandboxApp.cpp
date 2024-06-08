@@ -1,6 +1,6 @@
 // 客户端
 
-#include <Pigeon.h>
+#include <Pigeon.h>	// 链接的Pigeon项目（添加引用）
 
 class Sandbox : public Pigeon::Application
 {
