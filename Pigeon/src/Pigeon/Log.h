@@ -27,11 +27,11 @@ namespace Pigeon {
 #define PG_CORE_INFO(...)	::Pigeon::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define PG_CORE_WARN(...)	::Pigeon::Log::GetCoreLogger()->warn(__VA_ARGS__)
 #define PG_CORE_ERROR(...)	::Pigeon::Log::GetCoreLogger()->error(__VA_ARGS__)
-#define PG_CORE_FATAL(...)	::Pigeon::Log::GetCoreLogger()->fatal(__VA_ARGS__)
+#define PG_CORE_CRITICAL(...)	::Pigeon::Log::GetCoreLogger()->critical(__VA_ARGS__)
 
 // Client ÈÕÖ¾ºê
 #define PG_TRACE(...)	::Pigeon::Log::GetClientLogger()->trace(__VA_ARGS__)
 #define PG_INFO(...)	::Pigeon::Log::GetClientLogger()->info(__VA_ARGS__)
 #define PG_WARN(...)	::Pigeon::Log::GetClientLogger()->warn(__VA_ARGS__)
 #define PG_ERROR(...)	::Pigeon::Log::GetClientLogger()->error(__VA_ARGS__)
-#define PG_FATAL(...)	::Pigeon::Log::GetClientLogger()->fatal(__VA_ARGS__)
+#define PG_CRITICAL(...)	::Pigeon::Log::GetClientLogger()->critical(__VA_ARGS__)

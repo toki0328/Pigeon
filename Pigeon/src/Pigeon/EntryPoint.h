@@ -14,6 +14,7 @@ void main()
 	int a = 5;
 	PG_INFO("Hello Var={0}", a);
 	PG_ERROR("error!");
+	PG_CORE_CRITICAL("111");
 
 	auto app = Pigeon::CreateApplication();
 	app->Run();

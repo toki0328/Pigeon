@@ -9,3 +9,6 @@
 #else
 	#error Pigeon only support Windows!
 #endif
+
+// 左移x位，创建位字段
+#define BIT(x) (1 << x)
