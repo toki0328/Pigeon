@@ -13,6 +13,7 @@ void main()
 	PG_CORE_WARN("Initialized log");
 	int a = 5;
 	PG_INFO("Hello Var={0}", a);
+	PG_ERROR("error!");
 
 	auto app = Pigeon::CreateApplication();
 	app->Run();
