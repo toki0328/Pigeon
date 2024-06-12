@@ -4,6 +4,9 @@
     <Filter Include="Pigeon">
       <UniqueIdentifier>{67FB21CA-539D-4CA0-3C58-60F42899D3F0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pigeon\Events">
+      <UniqueIdentifier>{6BEDAB60-D7AD-2797-A0E8-70140C686C73}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pigeon.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Pigeon\EntryPoint.h">
       <Filter>Pigeon</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pigeon\Events\ApplicationEvent.h">
+      <Filter>Pigeon\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pigeon\Events\Event.h">
+      <Filter>Pigeon\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pigeon\Events\KeyEvent.h">
+      <Filter>Pigeon\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pigeon\Events\MouseEvent.h">
+      <Filter>Pigeon\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Pigeon\Log.h">
       <Filter>Pigeon</Filter>

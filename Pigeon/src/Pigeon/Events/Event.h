@@ -1,6 +1,7 @@
 #pragma once
 
-#include "../Core.h"
+#include <iostream>
+#include "Pigeon/Core.h"
 
 #include <string>
 #include <functional>
@@ -82,4 +83,9 @@ namespace Pigeon {
     private:
         Event& m_Event;
     };
+
+    inline std::ostream& operator<<(std::ostream& os, const Event& e)
+    {
+        return os << e.ToString();
+    }
 }
