@@ -7,6 +7,9 @@
     <Filter Include="Pigeon\Events">
       <UniqueIdentifier>{6BEDAB60-D7AD-2797-A0E8-70140C686C73}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pigeon.h" />
@@ -34,6 +37,12 @@
     <ClInclude Include="src\Pigeon\Log.h">
       <Filter>Pigeon</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pigeon\Window.h">
+      <Filter>Pigeon</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\WindowsWindow.h">
+      <Filter>Platform</Filter>
+    </ClInclude>
     <ClInclude Include="src\pgpch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +51,9 @@
     </ClCompile>
     <ClCompile Include="src\Pigeon\Log.cpp">
       <Filter>Pigeon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\WindowsWindow.cpp">
+      <Filter>Platform</Filter>
     </ClCompile>
     <ClCompile Include="src\pgpch.cpp" />
   </ItemGroup>

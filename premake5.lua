@@ -10,6 +10,14 @@ workspace "Pigeon"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- include directories relative to root folder (solution directory)
+-- 目录列表
+IncludeDir = {}
+IncludeDir["GLFW"] = "Pigeon/vendor/GLFW/include"
+
+-- 包含GLFW的premake的目录，相当于c++的头文件
+include "Pigeon/vendor/GLFW"
+
 project "Pigeon"
 	location "Pigeon"
 	kind "SharedLib"
@@ -31,19 +39,22 @@ project "Pigeon"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/spdlog-1.14.1-win64/include"
+		"%{prj.name}/vendor/spdlog/spdlog-1.14.1-win64/include",
+		"%{IncludeDir.GLFW}"
 	}
 
 	-- 指定库目录
 	libdirs 
 	{
-		"%{prj.name}/vendor/spdlog/spdlog-1.14.1-win64/lib"
+		"%{prj.name}/vendor/spdlog/spdlog-1.14.1-win64/lib",
 	}
 
 	-- 指定要链接的库
 	links
 	{
-		"spdlogd.lib"
+		"spdlogd.lib",
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
@@ -65,14 +76,17 @@ project "Pigeon"
 	filter "configurations:Debug"
 		defines "PG_DEBUG"
 		symbols "On"
+		buildoptions "/MDd"
 
 	filter "configurations:Release"
 		defines "PG_RELEASE"
 		optimize "On"
+		buildoptions "/MD"
 
 	filter "configurations:Dist"
 		defines "PG_DIST"
 		optimize "On"
+		buildoptions "/MD"
 
 project "Sandbox"
 	location "Sandbox"

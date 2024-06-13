@@ -4,11 +4,13 @@
 #include "Pigeon/Events/ApplicationEvent.h"
 #include "Pigeon/Log.h"
 
+#include <GLFW/glfw3.h>
+
 namespace Pigeon {
 
 	Application::Application()
 	{
-
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application()
@@ -18,23 +20,13 @@ namespace Pigeon {
 
 	void Application::Run()
 	{
-		WindowResizeEvent event(1280, 720);
-
-		// 
-		if (event.IsInCategory(EventCategoryApplication))
+		while (m_Running)
 		{
-			PG_TRACE(event.ToString());
+			glClearColor(1, 1, 0, 1);
+
+			// 用当前缓冲区清除值，GL_COLOR_BUFFER_BIT指清除颜色缓冲
+			glClear(GL_COLOR_BUFFER_BIT);
+			m_Window->OnUpdate();
 		}
-
-		//
-		if (event.IsInCategory(EventCategoryInput))
-		{
-			PG_TRACE(event.ToString());
-		}
-
-		std::cout << event << std::endl;
-		
-
-		while (true);	// 持续运行
 	}
 }
