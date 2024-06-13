@@ -5,6 +5,7 @@
 #include "Core.h"
 #include "Events/Event.h"
 #include "Window.h"
+#include "Pigeon/Events/ApplicationEvent.h"
 
 namespace Pigeon {
 
@@ -17,7 +18,10 @@ namespace Pigeon {
 
 		void Run();
 
+		void OnEvent(Event& e);
 	private:
+		bool OnWindowClose(WindowCloseEvent& e);
+
 		std::unique_ptr<Window> m_Window; // 创建唯一指针，保存Window的一个实例
 		bool m_Running = true;
 	};
