@@ -76,7 +76,8 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pgpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>PG_BUILD_DLL;PG_PLATFORM_WINDOWS;PG_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\spdlog-1.14.1-win64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -99,7 +100,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pgpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>PG_BUILD_DLL;PG_PLATFORM_WINDOWS;PG_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\spdlog-1.14.1-win64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -126,7 +128,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pgpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>PG_BUILD_DLL;PG_PLATFORM_WINDOWS;PG_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\spdlog-1.14.1-win64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -161,10 +164,14 @@
     <ClInclude Include="src\Pigeon\Events\KeyEvent.h" />
     <ClInclude Include="src\Pigeon\Events\MouseEvent.h" />
     <ClInclude Include="src\Pigeon\Log.h" />
+    <ClInclude Include="src\pgpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pigeon\Application.cpp" />
     <ClCompile Include="src\Pigeon\Log.cpp" />
+    <ClCompile Include="src\pgpch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

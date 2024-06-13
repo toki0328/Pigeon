@@ -18,6 +18,10 @@ project "Pigeon"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	-- Ô¤±àÒëÍ·ÎÄ¼ş
+	pchheader "pgpch.h"
+	pchsource "Pigeon/src/pgpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",

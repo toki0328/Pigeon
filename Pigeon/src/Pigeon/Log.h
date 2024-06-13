@@ -2,8 +2,6 @@
 
 // 日志类
 
-#include <memory.h>
-
 #include "Core.h"
 #include <spdlog/spdlog.h>
 #include <spdlog/fmt/ostr.h>
@@ -25,15 +23,15 @@ namespace Pigeon {
 }
 
 // Core 日志宏
-#define PG_CORE_TRACE(...)	::Pigeon::Log::GetCoreLogger()->trace(__VA_ARGS__)
-#define PG_CORE_INFO(...)	::Pigeon::Log::GetCoreLogger()->info(__VA_ARGS__)
-#define PG_CORE_WARN(...)	::Pigeon::Log::GetCoreLogger()->warn(__VA_ARGS__)
-#define PG_CORE_ERROR(...)	::Pigeon::Log::GetCoreLogger()->error(__VA_ARGS__)
+#define PG_CORE_TRACE(...)		::Pigeon::Log::GetCoreLogger()->trace(__VA_ARGS__)
+#define PG_CORE_INFO(...)		::Pigeon::Log::GetCoreLogger()->info(__VA_ARGS__)
+#define PG_CORE_WARN(...)		::Pigeon::Log::GetCoreLogger()->warn(__VA_ARGS__)
+#define PG_CORE_ERROR(...)		::Pigeon::Log::GetCoreLogger()->error(__VA_ARGS__)
 #define PG_CORE_CRITICAL(...)	::Pigeon::Log::GetCoreLogger()->critical(__VA_ARGS__)
 
 // Client 日志宏
-#define PG_TRACE(...)	::Pigeon::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define PG_INFO(...)	::Pigeon::Log::GetClientLogger()->info(__VA_ARGS__)
-#define PG_WARN(...)	::Pigeon::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define PG_ERROR(...)	::Pigeon::Log::GetClientLogger()->error(__VA_ARGS__)
+#define PG_TRACE(...)		::Pigeon::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define PG_INFO(...)		::Pigeon::Log::GetClientLogger()->info(__VA_ARGS__)
+#define PG_WARN(...)		::Pigeon::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define PG_ERROR(...)		::Pigeon::Log::GetClientLogger()->error(__VA_ARGS__)
 #define PG_CRITICAL(...)	::Pigeon::Log::GetClientLogger()->critical(__VA_ARGS__)

@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Pigeon {
 
 	// Window¹Ø±ÕÊÂ¼ş

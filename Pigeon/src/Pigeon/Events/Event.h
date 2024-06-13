@@ -1,10 +1,7 @@
 #pragma once
 
-#include <iostream>
 #include "Pigeon/Core.h"
 
-#include <string>
-#include <functional>
 
 namespace Pigeon {
 
