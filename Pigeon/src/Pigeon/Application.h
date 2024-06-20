@@ -24,6 +24,7 @@ namespace Pigeon {
 
 		std::unique_ptr<Window> m_Window; // 创建唯一指针，保存Window的一个实例
 		bool m_Running = true;
+
 	};
 
 	// 在客户端定义创建，用于返回一个app的对象

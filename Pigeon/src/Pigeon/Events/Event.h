@@ -81,8 +81,11 @@ namespace Pigeon {
         Event& m_Event;
     };
 
+
+    // 重写操作符，用于事件日志的输出（暂时无法使用）
     inline std::ostream& operator<<(std::ostream& os, const Event& e)
     {
         return os << e.ToString();
     }
+
 }
