@@ -49,7 +49,7 @@ namespace Pigeon {
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
-		glfwSetWindowUserPointer(m_Window, &m_Data);
+		glfwSetWindowUserPointer(m_Window, &m_Data);	// 设置指定窗口的用户定义指针。当前值保留直到窗口被销毁
 		SetVSync(true);
 
 		// 设置GLFW回调

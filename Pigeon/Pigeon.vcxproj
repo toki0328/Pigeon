@@ -166,6 +166,8 @@
     <ClInclude Include="src\Pigeon\Events\Event.h" />
     <ClInclude Include="src\Pigeon\Events\KeyEvent.h" />
     <ClInclude Include="src\Pigeon\Events\MouseEvent.h" />
+    <ClInclude Include="src\Pigeon\Layer.h" />
+    <ClInclude Include="src\Pigeon\LayerStack.h" />
     <ClInclude Include="src\Pigeon\Log.h" />
     <ClInclude Include="src\Pigeon\Window.h" />
     <ClInclude Include="src\Platform\WindowsWindow.h" />
@@ -173,6 +175,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pigeon\Application.cpp" />
+    <ClCompile Include="src\Pigeon\Layer.cpp" />
+    <ClCompile Include="src\Pigeon\LayerStack.cpp" />
     <ClCompile Include="src\Pigeon\Log.cpp" />
     <ClCompile Include="src\Platform\WindowsWindow.cpp" />
     <ClCompile Include="src\pgpch.cpp">

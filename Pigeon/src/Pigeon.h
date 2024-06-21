@@ -3,6 +3,7 @@
 // 用于客户端
 
 #include "Pigeon/Application.h"
+#include "Pigeon/Layer.h"
 #include "Pigeon/Log.h"
 
 // --- EntryPoint -----

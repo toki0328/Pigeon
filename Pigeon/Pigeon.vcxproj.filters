@@ -44,6 +44,8 @@
       <Filter>Platform</Filter>
     </ClInclude>
     <ClInclude Include="src\pgpch.h" />
+    <ClInclude Include="src\Pigeon\Layer.h" />
+    <ClInclude Include="src\Pigeon\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pigeon\Application.cpp">
@@ -56,5 +58,7 @@
       <Filter>Platform</Filter>
     </ClCompile>
     <ClCompile Include="src\pgpch.cpp" />
+    <ClCompile Include="src\Pigeon\Layer.cpp" />
+    <ClCompile Include="src\Pigeon\LayerStack.cpp" />
   </ItemGroup>
 </Project>
