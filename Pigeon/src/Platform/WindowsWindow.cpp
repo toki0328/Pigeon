@@ -5,6 +5,9 @@
 #include "Pigeon/Events/KeyEvent.h"
 #include "Pigeon/Events/MouseEvent.h"
 
+//#include <glad/glad.h>	// glad.h必须在glfw3.h前调用
+//#include <GLFW/glfw3.h>
+
 namespace Pigeon {
 
 	static bool s_GLFWInitialized = false;
@@ -47,8 +50,13 @@ namespace Pigeon {
 			s_GLFWInitialized = true;
 		}
 
+		// 初始化GLFW
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		// 初始化Glad
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		PG_CORE_ASSERT(status, "Failed to initialize Glad!");
+
 		glfwSetWindowUserPointer(m_Window, &m_Data);	// 设置指定窗口的用户定义指针。当前值保留直到窗口被销毁
 		SetVSync(true);
 

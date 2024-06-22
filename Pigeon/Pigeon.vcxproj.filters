@@ -34,6 +34,12 @@
     <ClInclude Include="src\Pigeon\Events\MouseEvent.h">
       <Filter>Pigeon\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pigeon\Layer.h">
+      <Filter>Pigeon</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pigeon\LayerStack.h">
+      <Filter>Pigeon</Filter>
+    </ClInclude>
     <ClInclude Include="src\Pigeon\Log.h">
       <Filter>Pigeon</Filter>
     </ClInclude>
@@ -44,11 +50,15 @@
       <Filter>Platform</Filter>
     </ClInclude>
     <ClInclude Include="src\pgpch.h" />
-    <ClInclude Include="src\Pigeon\Layer.h" />
-    <ClInclude Include="src\Pigeon\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pigeon\Application.cpp">
+      <Filter>Pigeon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pigeon\Layer.cpp">
+      <Filter>Pigeon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pigeon\LayerStack.cpp">
       <Filter>Pigeon</Filter>
     </ClCompile>
     <ClCompile Include="src\Pigeon\Log.cpp">
@@ -58,7 +68,5 @@
       <Filter>Platform</Filter>
     </ClCompile>
     <ClCompile Include="src\pgpch.cpp" />
-    <ClCompile Include="src\Pigeon\Layer.cpp" />
-    <ClCompile Include="src\Pigeon\LayerStack.cpp" />
   </ItemGroup>
 </Project>
