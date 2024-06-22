@@ -7,8 +7,14 @@
     <Filter Include="Pigeon\Events">
       <UniqueIdentifier>{6BEDAB60-D7AD-2797-A0E8-70140C686C73}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pigeon\ImGui">
+      <UniqueIdentifier>{D12129E4-BD84-B888-660A-F13E524C840B}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -34,6 +40,9 @@
     <ClInclude Include="src\Pigeon\Events\MouseEvent.h">
       <Filter>Pigeon\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pigeon\ImGui\ImGuiLayer.h">
+      <Filter>Pigeon\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Pigeon\Layer.h">
       <Filter>Pigeon</Filter>
     </ClInclude>
@@ -46,14 +55,21 @@
     <ClInclude Include="src\Pigeon\Window.h">
       <Filter>Pigeon</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\WindowsWindow.h">
       <Filter>Platform</Filter>
     </ClInclude>
     <ClInclude Include="src\pgpch.h" />
+    <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3_loader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pigeon\Application.cpp">
       <Filter>Pigeon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pigeon\ImGui\ImGuiLayer.cpp">
+      <Filter>Pigeon\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Pigeon\Layer.cpp">
       <Filter>Pigeon</Filter>
@@ -63,6 +79,9 @@
     </ClCompile>
     <ClCompile Include="src\Pigeon\Log.cpp">
       <Filter>Pigeon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\WindowsWindow.cpp">
       <Filter>Platform</Filter>

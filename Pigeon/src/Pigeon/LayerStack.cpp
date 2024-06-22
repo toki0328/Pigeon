@@ -16,7 +16,7 @@ namespace Pigeon {
 
 	void LayerStack::PushLayer(Layer* layer)
 	{
-		m_LayerInsert = m_Layers.emplace(m_LayerInsert, layer);
+		m_LayerInsert = m_Layers.emplace(m_LayerInsert, layer);	// Ïàµ±ÓÚinsert
 	}
 
 	void LayerStack::PushOverlay(Layer* overlay)

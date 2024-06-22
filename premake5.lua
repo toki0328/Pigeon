@@ -15,10 +15,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "Pigeon/vendor/GLFW/include"
 IncludeDir["Glad"] = "Pigeon/vendor/Glad/include"
+IncludeDir["ImGui"] = "Pigeon/vendor/imgui"
 
 -- 包含GLFW的premake的目录，相当于c++的头文件
 include "Pigeon/vendor/GLFW"
 include "Pigeon/vendor/Glad"
+include "Pigeon/vendor/imgui"
 
 project "Pigeon"
 	location "Pigeon"
@@ -43,7 +45,8 @@ project "Pigeon"
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/spdlog-1.14.1-win64/include",
 		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.Glad}"
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	-- 指定库目录
@@ -58,6 +61,7 @@ project "Pigeon"
 		"spdlogd.lib",
 		"GLFW",
 		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 

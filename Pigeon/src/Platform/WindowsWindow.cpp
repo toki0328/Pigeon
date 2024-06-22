@@ -151,9 +151,22 @@ namespace Pigeon {
 
 	void WindowsWindow::OnUpdate()
 	{
+		/* <关于GLFW事件的处理>
+		* GLFW需要定期地与窗口系统进行交流，不仅是为了接收事件，还是为了让整个应用看起来没有卡住。当你有着可见的窗口时，事件处理必须定期执行，正常情况下它会在每帧的缓冲区交换之后进行
+		* 这里有两种方式来处理挂起的事件。轮询（polling）和等待（waiting)，即glfwPollEvents()和glfwWaitEvent()
+		* 
+		* glwWaitEvents()
+		* 当连续渲染时这是最好的选择，像大多数的游戏那样。如果你只需要在收到新的输入后更新一次渲染，glfwWaitEvents 会是更好的选择。
+		* 它会一直等待直到收到至少一个事件，与此同时它会将线程进入休眠状态， 然后处理所有收到的事件。这将会节省大量的CPU周期，比如对于一些修改器界面来说是非常有用的
+		*/
+
+		/* <关于GLFW交换缓冲>
+		* GLFW默认使用双缓冲技术
+		*/
+
 		// 轮询事件、交换缓冲区
-		glfwPollEvents();
 		glfwSwapBuffers(m_Window);
+		glfwPollEvents();	
 	}
 
 	void WindowsWindow::SetVSync(bool enabled)

@@ -2,3 +2,6 @@
 [submodule "Pigeon/vendor/GLFW"]
 	path = Pigeon/vendor/GLFW
 	url = https://github.com/TheCherno/glfw
+[submodule "Pigeon/vendor/imgui"]
+	path = Pigeon/vendor/imgui
+	url = https://github.com/TheCherno/imgui
