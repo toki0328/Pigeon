@@ -21,3 +21,5 @@
 
 // 左移x位，创建位字段
 #define BIT(x) (1 << x)
+
+#define PG_BIND_EVENT_FN(x) std::bind(&x, this, std::placeholders::_1)
