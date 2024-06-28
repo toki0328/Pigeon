@@ -122,6 +122,7 @@ namespace Pigeon {
 		return false;
 	}
 
+	// Backspace is not useful
 	bool ImGuiLayer::OnKeyTypedEvent(KeyTypedEvent& e)
 	{
 		ImGuiIO& io = ImGui::GetIO();
