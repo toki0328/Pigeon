@@ -67,10 +67,6 @@ namespace Pigeon {
 		dispatcher.Dispatch<KeyReleasedEvent>(PG_BIND_EVENT_FN(ImGuiLayer::OnKeyReleasedEvent));
 		dispatcher.Dispatch<KeyTypedEvent>(PG_BIND_EVENT_FN(ImGuiLayer::OnKeyTypedEvent));
 		dispatcher.Dispatch<WindowResizeEvent>(PG_BIND_EVENT_FN(ImGuiLayer::OnWindowResizedEvent));
-
-		ImGuiIO& io = ImGui::GetIO();
-		io.WantCaptureMouse;
-		io.WantCaptureKeyboard;
 	}
 
 	bool ImGuiLayer::OnMouseButtonPressedEvent(MouseButtonPressedEvent& e)
