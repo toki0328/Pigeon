@@ -10,6 +10,10 @@
 	#error Pigeon only support Windows!
 #endif
 
+#ifdef PG_DEBUG
+	#define PG_ENABLE_ASSERTS
+#endif
+
 // µ÷ÊÔÐÅÏ¢
 #ifdef PG_ENABLE_ASSERTS
 	#define PG_ASSERT(x, ...) { if(!(x)) { PG_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }

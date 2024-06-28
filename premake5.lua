@@ -8,6 +8,8 @@ workspace "Pigeon"
 		"Dist"
 	}
 
+startproject  "Sandbox"
+
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- include directories relative to root folder (solution directory)
@@ -22,10 +24,13 @@ include "Pigeon/vendor/GLFW"
 include "Pigeon/vendor/Glad"
 include "Pigeon/vendor/imgui"
 
+
+
 project "Pigeon"
 	location "Pigeon"
 	kind "SharedLib"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -67,7 +72,6 @@ project "Pigeon"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -85,22 +89,23 @@ project "Pigeon"
 	filter "configurations:Debug"
 		defines "PG_DEBUG"
 		symbols "On"
-		buildoptions "/MDd"
+		runtime "Debug"
 
 	filter "configurations:Release"
 		defines "PG_RELEASE"
 		optimize "On"
-		buildoptions "/MD"
+		runtime "Release"
 
 	filter "configurations:Dist"
 		defines "PG_DIST"
 		optimize "On"
-		buildoptions "/MD"
+		runtime "Release"
 
 project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -130,7 +135,6 @@ project "Sandbox"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -141,14 +145,14 @@ project "Sandbox"
 	filter "configurations:Debug"
 		defines "PG_DEBUG"
 		symbols "On"
-		buildoptions "/MDd"
+		runtime "Debug"
 
 	filter "configurations:Release"
 		defines "PG_RELEASE"
 		optimize "On"
-		buildoptions "/MD"
+		runtime "Release"
 
 	filter "configurations:Dist"
 		defines "PG_DIST"
 		optimize "On"
-		buildoptions "/MD"
+		runtime "Release"
